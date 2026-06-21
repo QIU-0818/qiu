@@ -1,0 +1,25 @@
+{
+  "case_file": "baseline.cas.h5",
+  "launch": {
+    "precision": "double",
+    "processor_count": 4,
+    "mode": "solver"
+  },
+  "parameters": {
+    "inlet_velocity": [5.0, 10.0, 15.0],
+    "outlet_pressure": [0.0],
+    "fluid_temperature": [300.0, 330.0]
+  },
+  "named_expressions": {
+    "inlet_velocity_expr": "inlet_velocity",
+    "outlet_pressure_expr": "outlet_pressure",
+    "fluid_temperature_expr": "fluid_temperature"
+  },
+  "solution": {
+    "initialize": true,
+    "iterations": 500
+  },
+  "reports": [
+    "area-weighted-avg temperature outlet () yes outlet_temperature.out"
+  ]
+}
